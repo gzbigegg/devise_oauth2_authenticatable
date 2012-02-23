@@ -29,7 +29,7 @@ module Devise #:nodoc:
 
 
             # Verify User Auth code and get access token from auth server: will error on failue
-            access_token = Devise::oauth2_client.web_server.get_access_token(
+            access_token = Devise::oauth2_client.auth_code.get_token(
                     params[:code], :redirect_uri => Devise::session_sign_in_url(request,mapping)
                   )
                   

@@ -33,8 +33,8 @@ module Devise
             OAUTH2_CONFIG['client_id'],
             OAUTH2_CONFIG['client_secret'],
             :site => OAUTH2_CONFIG['authorization_server'],
-            :authorize_path => OAUTH2_CONFIG['authorize_path'],
-            :access_token_path => OAUTH2_CONFIG['access_token_path'])
+            :authorize_url => OAUTH2_CONFIG['authorize_path'],
+            :access_token_url => OAUTH2_CONFIG['access_token_path'])
   end
   
   

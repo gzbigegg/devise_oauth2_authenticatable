@@ -14,7 +14,7 @@ module Devise #:nodoc:
         
         session_sign_in_url = Devise::session_sign_in_url(request,::Devise.mappings[:user])
       
-        link_to link_text, Devise::oauth2_client.authorize_url(
+        link_to link_text, Devise::oauth2_client.auth_code.authorize_url(
             :redirect_uri => session_sign_in_url,  
             :scope => Devise::requested_scope
           ), options
